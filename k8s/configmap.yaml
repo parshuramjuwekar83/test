@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sahamati-config
+data:
+  db.url: "jdbc:postgresql://postgres.svc.cluster.local:5432/sahamati_db"
+  # default endpoints (can be overridden in app_config table)
+  sahamati.external.entity-token-url: "https://central-registry.saafe.in/entity-auth/token"
+  sahamati.external.user-token-url: "https://central-registry.saafe.in/iam-user/token"
